@@ -22,6 +22,7 @@ const DeckOfCards = () => {
 
         try {
             let drawRes = await axios.get(`${BASE_URL}/${deck_id}/draw/?count=1`);
+            console.log(drawRes.data.remaining)
             if (drawRes.data.remaining === 0) {
                 throw new Error("no cards remaining!");
             };
