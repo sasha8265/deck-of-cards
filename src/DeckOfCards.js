@@ -15,7 +15,7 @@ const DeckOfCards = () => {
             setDeck(deckRes.data);
         };
         shuffleDeck();
-    }, []);
+    }, [setDeck]);
 
     async function drawCard() {
         let {deck_id} = deck;
